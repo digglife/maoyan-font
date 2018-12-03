@@ -14,7 +14,7 @@ setuptools.setup(
     url='https://github.com/digglife/maoyan-font',
     packages=setuptools.find_packages(),
     classifiers=[
-        'Environment :: Web Environment'
+        'Environment :: Web Environment',
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
