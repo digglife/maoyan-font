@@ -22,12 +22,35 @@ python setup.py install
 ```python
 
 from maoyan_font import MaoyanFontParser
+
 parser = MaoyanFontParser()
 font = parser.load('http://vfile.meituan.net/colorstone/294024cb386679d8e940022d5e3b6a162088.woff')
 font.normalize('\uf8bc.\ueb54')
 # '9.1'
 
 ```
+
+本模块附带了一个命令行工具 `mybox`, 用于展示模块的用法。
+
+```bash
+
+$ mybox https://maoyan.com/films/249342
+{'name': '海王', 'box': '468万'}
+
+$ mybox -h
+
+usage: mybox [-h] url
+
+get box office info via url
+
+positional arguments:
+  url         movie url to parse
+
+optional arguments:
+  -h, --help  show this help message and exit
+
+```
+
 
 ### 原理
 
