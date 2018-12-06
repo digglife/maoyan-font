@@ -1,11 +1,12 @@
 import setuptools
+from maoyan_font import __version__
 
 with open('README.md', 'r') as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name='maoyan_font',
-    version='2018.12',
+    version=__version__,
     author='Zhu Sheng Li',
     author_email='digglife@gmail.com',
     description='将猫眼电影网页中票房、评分等数据的乱码转化成正常数字。',
@@ -20,5 +21,6 @@ setuptools.setup(
         'Operating System :: OS Independent',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
-    install_requires=['requests', 'fonttools'],
+    install_requires=['requests', 'fonttools', 'beautifulsoup4'],
+    entry_points={'console_scripts': ['mybox=maoyan_font.__main__:main']},
 )
